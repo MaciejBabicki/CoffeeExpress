@@ -10,28 +10,17 @@ import java.util.List;
 
 @RestController
 class UserController {
-
     private final UserRepository repo;
-
     UserController(final UserRepository repo) {
         this.repo = repo;
     }
-
     @GetMapping("/user")
     public String user(){
         return "user";
     }
-
     @GetMapping("/users")
     public ResponseEntity getUsers(){
         List<User> users = repo.findAll();
         return ResponseEntity.ok(users);
     }
-
-
-
-
-
-
-
 }

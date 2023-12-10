@@ -7,9 +7,6 @@ import java.util.Optional;
 
 interface UserRepository extends JpaRepository<User, Integer>{
     Optional <User> getAll (int id);
-
     Optional <UserDTO> getlAll (String name, String password);
-
     Page<User> findById (int id);
-
 }

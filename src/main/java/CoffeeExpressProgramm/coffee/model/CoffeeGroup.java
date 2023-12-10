@@ -53,8 +53,6 @@ import java.util.Set;
         return milk;
     }
 
-
-
     public void setId(final int id) {
         this.id = id;
     }
@@ -70,7 +68,6 @@ import java.util.Set;
     void setMilk(final String milk) {
         this.milk = milk;
     }
-
 
     public Arrays getCoffee() {
         return null;

@@ -10,6 +10,5 @@ public record UserDTO(
         String name,
         @NotBlank
         String password
-
 ) {
 }

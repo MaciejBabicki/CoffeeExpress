@@ -26,18 +26,6 @@ class ProjectService {
         return repo.save(toSave);
     }
 
-//    public GroupReadModel createGroup(LocalDateTime deadline, int projectId){
-//        if(!config.isAllowMultipleCoffees() || !coffeeRepo.findAll().isEmpty())
-//        throw new IllegalStateException("Only one group from project is allowed");
-//        repo.findById(projectId)
-//                .map(project -> {
-//                    var result.setDescription(project.getName());
-//                    result.setCoffees(project.getClass().stream()
-//                            .map(step -> new Coffee(step.getDescription(), deadline.plusDays(step.getDaysToDeadline())
-//                                    .collect(Collectors.toSet())
-//                })
-//
-//    }
 
     private void setDescription(final String name) {
     }

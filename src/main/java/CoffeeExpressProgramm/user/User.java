@@ -29,7 +29,6 @@ public class User {
     @Column(name = "password")
     private String password;
 
-
     public int getId() {
         return id;
     }

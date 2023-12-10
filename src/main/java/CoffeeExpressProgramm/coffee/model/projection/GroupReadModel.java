@@ -17,15 +17,6 @@ public class GroupReadModel {
     private LocalDateTime deadline;
     private Set<GroupCoffeeWriteModel> coffees;
 
-//    public GroupReadModel(CoffeeGroup source){
-//        description = source.getName();
-//        source.getCoffee.equals("Lambo");
-//        source.getCoffee().stream()
-//                .map(LocalDateTime::compareTo)
-//                ifPresent(date - deadline = date);
-//        tasks = source.getCoffee().stream()
-//
-//    }
     public GroupReadModel(final CoffeeGroup result){
 
     }

@@ -27,8 +27,6 @@ import java.util.Set;
     @ManyToOne
     @JoinColumn(name = "coffee_group_id")
     private CoffeeGroup group;
-
-
     public Coffee(String name, String milk){
 
         this.name = name;

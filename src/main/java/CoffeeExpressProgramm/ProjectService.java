@@ -1,4 +1,0 @@
-package CoffeeExpressProgramm;
-
-class ProjectService {
-}

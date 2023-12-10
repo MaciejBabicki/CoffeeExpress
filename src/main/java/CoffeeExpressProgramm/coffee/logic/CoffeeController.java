@@ -1,5 +1,7 @@
-package CoffeeExpressProgramm.coffee.model;
+package CoffeeExpressProgramm.coffee.logic;
 
+import CoffeeExpressProgramm.coffee.model.Coffee;
+import CoffeeExpressProgramm.coffee.model.CoffeeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -27,8 +29,6 @@ public class CoffeeController {
         return ResponseEntity.created(URI.create("/" + readyCoffee.getId())).body(readyCoffee);
     }
 
-
-
     @GetMapping(value = "/coffees", params = {"!sort", "!page", "!size"})
     ResponseEntity<List<Coffee>>readAllCoffees(){
         logger.warn("Exposing all coffees");
@@ -48,7 +48,6 @@ public class CoffeeController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-
     @PutMapping("/coffees/{id}")
         ResponseEntity<?> updateCoffee(@PathVariable int id, @RequestBody Coffee toUpdate){
         if(!repository.existsById(id)){
@@ -58,7 +57,6 @@ public class CoffeeController {
          repository.save(toUpdate);
          return ResponseEntity.noContent().build();
     }
-
 }
 
 

@@ -8,7 +8,6 @@ import java.util.Set;
 @Entity
 @Table(name="projects")
 public class Project {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -18,7 +17,6 @@ public class Project {
     private Set<CoffeeGroup> groups;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "project")
     private Set<ProjectStep> steps;
-
     public int getId() {
         return id;
     }

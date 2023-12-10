@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 interface SQLCoffeeGroupRepository extends CoffeeGroupRepository, JpaRepository<CoffeeGroup, Integer> {
     @Override
-    @Query("from CoffeeGroup g join fetch g.tasks")
+    @Query("from CoffeeGroup g join fetch g.coffees")
     List<CoffeeGroup> findAll();
 
 

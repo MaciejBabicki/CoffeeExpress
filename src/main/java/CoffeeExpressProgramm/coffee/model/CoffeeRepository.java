@@ -13,9 +13,5 @@ public interface CoffeeRepository {
     boolean existsById(Integer id);
     Coffee save(Coffee entity);
     boolean existsByDoneIsFalseAndGroup_Id(Integer groupId);
-
     List<Coffee>findByDone(boolean done);
-
-
-
 }

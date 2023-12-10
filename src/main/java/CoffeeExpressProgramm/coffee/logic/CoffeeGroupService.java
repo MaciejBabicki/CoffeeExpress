@@ -46,6 +46,5 @@ class CoffeeGroupService {
         }
         CoffeeGroup result = (CoffeeGroup) repo.findById(groupId)
                 .orElseThrow(() -> new IllegalArgumentException("Coffee with given id not found"));
-
     }
 }
