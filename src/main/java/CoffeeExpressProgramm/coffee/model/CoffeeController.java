@@ -1,7 +1,5 @@
-package CoffeeExpressProgramm.coffee.controller;
+package CoffeeExpressProgramm.coffee.model;
 
-import CoffeeExpressProgramm.coffee.model.Coffee;
-import CoffeeExpressProgramm.coffee.model.CoffeeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;

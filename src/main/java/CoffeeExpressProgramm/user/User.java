@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-class User {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,9 +28,6 @@ class User {
     @NotNull
     @Column(name = "password")
     private String password;
-
-    @NotNull
-    private List<String> preferences;
 
 
     public int getId() {

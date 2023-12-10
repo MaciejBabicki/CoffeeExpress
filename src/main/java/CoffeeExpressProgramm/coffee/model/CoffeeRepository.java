@@ -12,6 +12,7 @@ public interface CoffeeRepository {
     Optional<Coffee> findById(Integer id);
     boolean existsById(Integer id);
     Coffee save(Coffee entity);
+    boolean existsByDoneIsFalseAndGroup_Id(Integer groupId);
 
     List<Coffee>findByDone(boolean done);
 

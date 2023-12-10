@@ -1,39 +1,42 @@
 package CoffeeExpressProgramm.coffee.model;
 
-import CoffeeExpressProgramm.user.User;
 import jakarta.persistence.*;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 
 @NoArgsConstructor
 
 @Entity
-@Table(name = "coffees")
- public class Coffee{
+@Table(name = "coffees_groups")
+ public class CoffeeGroup {
 
+    public Arrays getCoffee;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     public boolean done;
     private String milk;
-    private String sirup;
-    @Embedded
-    private User user = new User();
-    @Getter
-    @ManyToOne
-    @JoinColumn(name = "coffee_group_id")
-    private CoffeeGroup group;
 
+    @JoinColumn(name="project_id")
+    public Project project;
 
-    public Coffee(String name, String milk){
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "group")
+    private Set<Coffee> coffees;
 
+    CoffeeGroup(final Arrays getCoffee, final int id, final String name, final boolean done, final String milk) {
+        this.getCoffee = getCoffee;
+        this.id = id;
         this.name = name;
+        this.done = done;
         this.milk = milk;
     }
+
     public int getId() {
         return id;
     }
@@ -46,19 +49,17 @@ import java.util.Set;
         return done;
     }
 
-    public String getMilk() {
+    String getMilk() {
         return milk;
     }
 
-    String getSirup() {
-        return sirup;
-    }
+
 
     public void setId(final int id) {
         this.id = id;
     }
 
-    void setName(final String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -70,11 +71,8 @@ import java.util.Set;
         this.milk = milk;
     }
 
-    void setSirup(final String sirup) {
-        this.sirup = sirup;
-    }
 
-    void setGroup(final CoffeeGroup group) {
-        this.group = group;
+    public Arrays getCoffee() {
+        return null;
     }
 }

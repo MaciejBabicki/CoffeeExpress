@@ -1,0 +1,9 @@
+crate tabe coffee_groups
+(
+id          int primary key auto_increment,
+name        varchar(100)not null,
+done        bir
+)
+alter table coffees add column coffee_group_id int null;
+alter table coffees
+    add foreign key (coffee_group_id) references coffee_groups (id)
